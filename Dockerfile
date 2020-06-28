@@ -7,56 +7,7 @@ FROM alpine:edge
 RUN sed -e 's;^#http\(.*\)/v3.9/community;http\1/v3.9/community;g' -i /etc/apk/repositories
 
 # Installing Python
-RUN apk add --no-cache --update \
-    pkgconfig \
-    python3 \
-    python3-dev \
-    python \
-    python-dev \
-    bash \
-    build-base \
-    bzip2-dev \
-    curl \
-    figlet \
-    gcc \
-    git \
-    sudo \
-    util-linux \
-    chromium \
-    chromium-chromedriver \
-    jpeg-dev \
-    libffi-dev \
-    libpq \
-    libwebp-dev \
-    libxml2 \
-    libxml2-dev \
-    libxslt-dev \
-    linux-headers \
-    musl \
-    neofetch \
-    openssl-dev \
-    php-pgsql \
-    postgresql \
-    postgresql-client \
-    postgresql-dev \
-    py3-lxml \
-    py3-pillow \
-    py3-pip \
-    py3-setuptools \
-    py3-psycopg2 \
-    py3-requests \
-    py3-sqlalchemy \
-    py3-tz \
-    py3-aiohttp \
-    openssl \
-    pv \
-    jq \
-    wget \
-    readline-dev \
-    sqlite \
-    sqlite-dev \
-    sudo \
-    zlib-dev
+RUN apk add --no-cache --update pkgconfig python3 python3-dev python python-dev bash build-base bzip2-dev curl figlet gcc git sudo util-linux chromium chromium-chromedriver jpeg-dev libffi-dev libpq libwebp-dev libxml2 libxml2-dev libxslt-dev linux-headers musl neofetch openssl-dev php-pgsql postgresql postgresql-client postgresql-dev py3-lxml py3-pillow py3-pip py3-setuptools py3-psycopg2 py3-requests py3-sqlalchemy py3-tz py3-aiohttp openssl pv jq wget readline-dev sqlite sqlite-dev sudo zlib-dev
 
 # Copy Python Requirements to /app
 
