@@ -8,6 +8,11 @@ RUN sed -e 's;^#http\(.*\)/v3.9/community;http\1/v3.9/community;g' -i /etc/apk/r
 
 # Installing Python
 RUN apk add --no-cache --update \
+    pkgconfig \
+    python3 \
+    python3-dev \
+    python \
+    python-dev \
     bash \
     build-base \
     bzip2-dev \
@@ -43,13 +48,10 @@ RUN apk add --no-cache --update \
     py3-sqlalchemy \
     py3-tz \
     py3-aiohttp \
-    python-dev \
     openssl \
     pv \
     jq \
     wget \
-    python3 \
-    python3-dev \
     readline-dev \
     sqlite \
     sqlite-dev \
